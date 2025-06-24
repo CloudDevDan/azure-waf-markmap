@@ -10,6 +10,18 @@ This resource is built using [**Markmap**](https://markmap.js.org/), a JavaScrip
 
 ---
 
+## 🌐 Related Projects
+
+Explore my other related projects:
+
+- [🗺️ Dan’s Azure CAF Markmap](https://github.com/CloudDevDan/azure-caf-markmap)
+- [🗺️ Dan’s Azure WAF Markmap](https://github.com/CloudDevDan/azure-waf-markmap)
+- [🧠 Dan’s AI Terminology Tracker](https://github.com/CloudDevDan/dans-ai-terminology-tracker)
+- [☁️ Dan’s Blog](https://daniel.mcloughlin.cloud/)
+- [☁️ Beginner To Builder with Azure AI Foundry](https://daniel.mcloughlin.cloud/series/azureai)
+
+---
+
 ## 📝 Microsoft Azure Well-Architected Framework - Executive Summary
 
 For a concise overview of the Azure Well-Architected Framework and each of its key Methodologies, see the [Executive Summary](./azure-waf-exec-summary.md) file.

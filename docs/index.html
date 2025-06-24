@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>Dan’s Azure WAF Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  background-color: #1a1b26;
+}
+.markmap-dark {
+  background: #27272a;
+  color: white;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.12/dist/style.css">
+<link rel="icon" type="image/png" href="favicon/favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="favicon/site.webmanifest">
+</head>
+<body style="background-color: #1a1b26;">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+  #toggleHeaderButton {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  #toggleHeaderButton:hover {
+    background-color: #555;
+  }
+</style>
+<button id="toggleHeaderButton">Hide Header</button>
+<div id="headerWrapper">
+  <header style="
+    padding: 2rem 1rem;
+    background-color: #0d0d0d;
+    color: white;
+    text-align: center;
+    border-bottom: 1px solid #222;
+  ">
+    <h1 style="font-size: 2.25rem; margin: 0; font-weight: 600;">
+      🗺️ Dan’s Azure WAF Markmap
+    </h1>
+    <p style="margin-top: 0.75rem; font-size: 1.05rem; color: #aaa; max-width: 800px; margin-left: auto; margin-right: auto;">
+      A interactive map of the Microsoft Azure Well-Architected Framework
+    </p>
+    <p style="margin-top: 0.5rem; font-size: 0.95rem; color: #666;">
+      By Daniel McLoughlin ☁️ &nbsp;|&nbsp;
+      <a href="https://daniel.mcloughlin.cloud/" target="_blank" style="color: #4da6ff; text-decoration: none;">
+        Visit my blog →
+      </a>
+      |&nbsp;
+      <a href="https://github.com/CloudDevDan/azure-waf-markmap" target="_blank" style="color: #4da6ff; text-decoration: none;">
+        Project repo →
+      </a>
+    </p>
+    <p style="margin-top: 1.5rem; font-size: 1rem; color: white;">
+      Click a node 🟠 to get started.
+    </p>
+  </header>
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const toggleBtn = document.getElementById('toggleHeaderButton');
+    const headerWrapper = document.getElementById('headerWrapper');
+    toggleBtn.addEventListener('click', function() {
+      if (headerWrapper.style.display === 'none') {
+        headerWrapper.style.display = '';
+        toggleBtn.textContent = 'Hide Header';
+      } else {
+        headerWrapper.style.display = 'none';
+        toggleBtn.textContent = 'Show Header';
+      }
+    });
+  });
+</script>
+
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.12/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.12/dist/index.js"></script><script>((r) => {
+          setTimeout(r);
+        })(() => {
+  const { markmap, mm } = window;
+  const toolbar = new markmap.Toolbar();
+  toolbar.attach(mm);
+  const el = toolbar.render();
+  el.setAttribute("style", "position:absolute;bottom:20px;right:20px");
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+              if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+                document.documentElement.classList.add("markmap-dark");
+              }
+            })(() => window.markmap,null,{"content":"Azure Well-Architected Framework","children":[{"content":"&#x1f3db;&#xfe0f; Pillars","children":[{"content":"&#x1f4d6; Overview","children":[{"content":"<a href=\"https://learn.microsoft.com/en-us/azure/well-architected/pillars\" target=\"_blank\">Well-Architected Framework Pillars</a>","children":[],"payload":{"tag":"li","lines":"17,18"}},{"content":"<a href=\"https://learn.microsoft.com/en-us/assessments/azure-architecture-review/\" target=\"_blank\">Azure Well-Architected Review</a>","children":[],"payload":{"tag":"li","lines":"18,20"}}],"payload":{"tag":"h3","lines":"16,17"}},{"content":"&#x1f501; Reliability","children":[{"content":"<a href=\"https://learn.microsoft.com/en-us/azure/well-architected/reliability/\" target=\"_blank\">Quick links</a>","children":[],"payload":{"tag":"li","lines":"22,23"}},{"content":"<a href=\"https://learn.microsoft.com/en-us/azure/well-architected/reliability/principles\" target=\"_blank\">Design principles</a>","children":[],"payload":{"tag":"li","lines":"23,24"}},{"content":"<a href=\"https://learn.microsoft.com/en-us/azure/well-architected/reliability/checklist\" target=\"_blank\">Checklist</a>","children":[],"payload":{"tag":"li","lines":"24,25"}},{"content":"<a href=\"https://learn.microsoft.com/en-us/azure/well-architected/reliability/tradeoffs\" target=\"_blank\">Tradeoffs</a>","children":[],"payload":{"tag":"li","lines":"25,26"}}],"payload":{"tag":"h3","lines":"20,21"}},{"content":"&#x1f512; Security","children":[{"content":"<a href=\"https://learn.microsoft.com/en-us/azure/well-architected/security/\" target=\"_blank\">Quick links</a>","children":[],"payload":{"tag":"li","lines":"43,44"}},{"content":"<a href=\"https://learn.microsoft.com/en-us/azure/well-architected/security/principles\" target=\"_blank\">Design principles</a>","children":[],"payload":{"tag":"li","lines":"44,45"}},{"content":"<a href=\"https://learn.microsoft.com/en-us/azure/well-architected/security/checklist\" target=\"_blank\">Checklist</a>","children":[],"payload":{"tag":"li","lines":"45,46"}},{"content":"<a href=\"https://learn.microsoft.com/en-us/azure/well-architected/security/tradeoffs\" target=\"_blank\">Tradeoffs</a>","children":[],"payload":{"tag":"li","lines":"46,47"}}],"payload":{"tag":"h3","lines":"41,42"}},{"content":"&#x1f4b0; Cost Optimization","children":[{"content":"<a href=\"https://learn.microsoft.com/en-us/azure/well-architected/cost-optimization/\" target=\"_blank\">Quick links</a>","children":[],"payload":{"tag":"li","lines":"65,66"}},{"content":"<a href=\"https://learn.microsoft.com/en-us/azure/well-architected/cost-optimization/principles\" target=\"_blank\">Design principles</a>","children":[],"payload":{"tag":"li","lines":"66,67"}},{"content":"<a href=\"https://learn.microsoft.com/en-us/azure/well-architected/cost-optimization/checklist\" target=\"_blank\">Checklist</a>","children":[],"payload":{"tag":"li","lines":"67,68"}},{"content":"<a href=\"https://learn.microsoft.com/en-us/azure/well-architected/cost-optimization/tradeoffs\" target=\"_blank\">Tradeoffs</a>","children":[],"payload":{"tag":"li","lines":"68,69"}}],"payload":{"tag":"h3","lines":"63,64"}},{"content":"&#x2699;&#xfe0f; Operational Excellence","children":[{"content":"<a href=\"https://learn.microsoft.com/en-us/azure/well-architected/operational-excellence/\" target=\"_blank\">Quick links</a>","children":[],"payload":{"tag":"li","lines":"88,89"}},{"content":"<a href=\"https://learn.microsoft.com/en-us/azure/well-architected/operational-excellence/principles\" target=\"_blank\">Design principles</a>","children":[],"payload":{"tag":"li","lines":"89,90"}},{"content":"<a href=\"https://learn.microsoft.com/en-us/azure/well-architected/operational-excellence/checklist\" target=\"_blank\">Checklist</a>","children":[],"payload":{"tag":"li","lines":"90,91"}},{"content":"<a href=\"https://learn.microsoft.com/en-us/azure/well-architected/operational-excellence/tradeoffs\" target=\"_blank\">Tradeoffs</a>","children":[],"payload":{"tag":"li","lines":"91,92"}}],"payload":{"tag":"h3","lines":"86,87"}},{"content":"&#x1f680; Performance Efficiency","children":[{"content":"<a href=\"https://learn.microsoft.com/en-us/azure/well-architected/performance-efficiency/\" target=\"_blank\">Quick links</a>","children":[],"payload":{"tag":"li","lines":"110,111"}},{"content":"<a href=\"https://learn.microsoft.com/en-us/azure/well-architected/performance-efficiency/principles\" target=\"_blank\">Design principles</a>","children":[],"payload":{"tag":"li","lines":"111,112"}},{"content":"<a href=\"https://learn.microsoft.com/en-us/azure/well-architected/performance-efficiency/checklist\" target=\"_blank\">Checklist</a>","children":[],"payload":{"tag":"li","lines":"112,113"}},{"content":"<a href=\"https://learn.microsoft.com/en-us/azure/well-architected/performance-efficiency/tradeoffs\" target=\"_blank\">Tradeoffs</a>","children":[],"payload":{"tag":"li","lines":"113,114"}}],"payload":{"tag":"h3","lines":"108,109"}}],"payload":{"tag":"h2","lines":"14,15"}},{"content":"&#x1f4c1; Resources","children":[{"content":"&#x1f9e9; Workloads","children":[{"content":"<a href=\"https://learn.microsoft.com/en-us/azure/well-architected/workloads\" target=\"_blank\">Overview</a>","children":[],"payload":{"tag":"li","lines":"133,134"}},{"content":"<a href=\"https://learn.microsoft.com/en-us/azure/well-architected/ai/\" target=\"_blank\">AI</a>","children":[],"payload":{"tag":"li","lines":"134,135"}},{"content":"<a href=\"https://learn.microsoft.com/en-us/azure/well-architected/azure-virtual-desktop/\" target=\"_blank\">Azure Virtual Desktop</a>","children":[],"payload":{"tag":"li","lines":"135,136"}},{"content":"<a href=\"https://learn.microsoft.com/en-us/azure/well-architected/azure-vmware/\" target=\"_blank\">Azure VMware Solution</a>","children":[],"payload":{"tag":"li","lines":"136,137"}},{"content":"<a href=\"https://learn.microsoft.com/en-us/azure/well-architected/mission-critical/\" target=\"_blank\">Mission-critical</a>","children":[],"payload":{"tag":"li","lines":"137,138"}},{"content":"<a href=\"https://learn.microsoft.com/en-us/azure/well-architected/oracle-iaas/\" target=\"_blank\">Oracle on IaaS</a>","children":[],"payload":{"tag":"li","lines":"138,139"}},{"content":"<a href=\"https://learn.microsoft.com/en-us/azure/well-architected/saas/\" target=\"_blank\">Software as a service (SaaS)</a>","children":[],"payload":{"tag":"li","lines":"139,140"}},{"content":"<a href=\"https://learn.microsoft.com/en-us/azure/well-architected/sap/quick-links\" target=\"_blank\">SAP</a>","children":[],"payload":{"tag":"li","lines":"140,141"}},{"content":"<a href=\"https://learn.microsoft.com/en-us/azure/well-architected/sustainability/\" target=\"_blank\">Sustainability</a>","children":[],"payload":{"tag":"li","lines":"141,143"}}],"payload":{"tag":"h3","lines":"131,132"}},{"content":"&#x1f4da; Service Guides","children":[{"content":"<a href=\"https://learn.microsoft.com/en-us/azure/well-architected/workloads\" target=\"_blank\">Catalog of Azure services</a>","children":[],"payload":{"tag":"li","lines":"144,146"}}],"payload":{"tag":"h3","lines":"143,144"}},{"content":"&#x1f6e0;&#xfe0f; Design Guides","children":[{"content":"<a href=\"https://learn.microsoft.com/en-us/azure/well-architected/design-guides/health-modeling\" target=\"_blank\">Health modeling</a>","children":[],"payload":{"tag":"li","lines":"148,149"}},{"content":"<a href=\"https://learn.microsoft.com/en-us/azure/well-architected/design-guides/implementing-recommendations\" target=\"_blank\">Implementing recommendations</a>","children":[],"payload":{"tag":"li","lines":"149,150"}},{"content":"<a href=\"https://learn.microsoft.com/en-us/azure/well-architected/design-guides/optimize-workload-using-flows\" target=\"_blank\">Optimize using flows</a>","children":[],"payload":{"tag":"li","lines":"150,151"}},{"content":"<a href=\"https://learn.microsoft.com/en-us/azure/well-architected/design-guides/handle-transient-faults\" target=\"_blank\">Handle transient faults</a>","children":[],"payload":{"tag":"li","lines":"151,152"}},{"content":"<a href=\"https://learn.microsoft.com/en-us/azure/well-architected/design-guides/background-jobs\" target=\"_blank\">Develop background jobs</a>","children":[],"payload":{"tag":"li","lines":"152,153"}},{"content":"<a href=\"https://learn.microsoft.com/en-us/azure/well-architected/reliability/partition-data\" target=\"_blank\">Data partitioning</a>","children":[],"payload":{"tag":"li","lines":"153,154"}},{"content":"<a href=\"https://learn.microsoft.com/en-us/azure/well-architected/design-guides/release-engineering-continuous-integration\" target=\"_blank\">Continuous integration</a>","children":[],"payload":{"tag":"li","lines":"154,156"}}],"payload":{"tag":"h3","lines":"146,147"}},{"content":"&#x1f9e0; How to be a proficient architect","children":[{"content":"<a href=\"https://learn.microsoft.com/en-us/azure/well-architected/architect-role/fundamentals\" target=\"_blank\">Architect&apos;s fundamentals</a>","children":[],"payload":{"tag":"li","lines":"158,159"}},{"content":"Deliverables","children":[{"content":"<a href=\"https://learn.microsoft.com/en-us/azure/well-architected/architect-role/checklist\" target=\"_blank\">Checklist</a>","children":[],"payload":{"tag":"li","lines":"160,161"}},{"content":"<a href=\"https://learn.microsoft.com/en-us/azure/well-architected/architect-role/architecture-design-specification\" target=\"_blank\">Architecture design specification</a>","children":[],"payload":{"tag":"li","lines":"161,162"}},{"content":"<a href=\"https://learn.microsoft.com/en-us/azure/well-architected/architect-role/design-diagrams\" target=\"_blank\">Design diagrams</a>","children":[],"payload":{"tag":"li","lines":"162,163"}},{"content":"<a href=\"https://learn.microsoft.com/en-us/azure/well-architected/architect-role/architecture-decision-record\" target=\"_blank\">Architecture decision record</a>","children":[],"payload":{"tag":"li","lines":"163,164"}},{"content":"<a href=\"https://learn.microsoft.com/en-us/azure/well-architected/architect-role/collaboration\" target=\"_blank\">Collaboration with implementors</a>","children":[],"payload":{"tag":"li","lines":"164,165"}},{"content":"<a href=\"https://learn.microsoft.com/en-us/azure/well-architected/architect-role/ongoing-support\" target=\"_blank\">Consultative support</a>","children":[],"payload":{"tag":"li","lines":"165,167"}}],"payload":{"tag":"li","lines":"159,167"}}],"payload":{"tag":"h3","lines":"156,157"}},{"content":"&#x1f4e6; Additional resources","children":[{"content":"<a href=\"https://learn.microsoft.com/en-us/azure/architecture/\" target=\"_blank\">Azure Architecture Center</a>","children":[],"payload":{"tag":"li","lines":"168,169"}},{"content":"<a href=\"https://learn.microsoft.com/en-us/azure/cloud-adoption-framework\" target=\"_blank\">Microsoft Cloud Adoption Framework for Azure</a>","children":[],"payload":{"tag":"li","lines":"169,170"}},{"content":"<a href=\"https://learn.microsoft.com/en-us/azure/app-modernization-guidance\" target=\"_blank\">App Modernisation Guidance for Azure</a>","children":[],"payload":{"tag":"li","lines":"170,171"}}],"payload":{"tag":"h3","lines":"167,168"}}],"payload":{"tag":"h2","lines":"129,130"}}],"payload":{"tag":"h1","lines":"12,13"}},{"colorFreezeLevel":2,"activeNode":{"placement":"center"},"spacingVertical":8,"initialExpandLevel":3})</script>
+</body>
+</html>

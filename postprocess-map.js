@@ -23,7 +23,7 @@ if (!html.includes('apple-touch-icon')) {
 // ✅ Update <title>
 html = html.replace(
   /<title>.*?<\/title>/,
-  '<title>🗺️ Dan’s Azure WAF Markmap</title>'
+  '<title>Dan’s Azure WAF Markmap</title>'
 );
 
 // ✅ Update #mindmap style with dark background + white text

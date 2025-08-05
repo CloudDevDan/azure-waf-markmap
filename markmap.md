@@ -167,7 +167,6 @@ markmap:
 
 ### 📦 Additional resources
 - <a href="https://learn.microsoft.com/en-us/azure/cloud-adoption-framework" target="_blank">Microsoft Cloud Adoption Framework for Azure</a>
-<!-- - <a href="https://learn.microsoft.com/en-us/azure/architecture/framework/" target="_blank">Well-Architected Framework</a> -->
 - <a href="https://learn.microsoft.com/en-us/azure/cloud-adoption-framework" target="_blank">Microsoft AI Adoption</a>
 - <a href="https://learn.microsoft.com/en-us/azure/app-modernization-guidance" target="_blank">App Modernisation Guidance for Azure</a>
 - <a href="https://learn.microsoft.com/en-us/azure/architecture/" target="_blank">Azure Architecture Center</a>
